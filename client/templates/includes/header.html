@@ -1,0 +1,74 @@
+<template name="header">
+
+    <header>
+        <div class="drophistory">
+            <div class="items">
+                <div class="items-inner">
+
+
+
+                    <a href="/user/6903" class="item-history restricted">
+                        <img src="https://cdn.easydrop.ru/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FA957ODGcDZH_9e_mr-DkvbiKvWFxDhTvMMi3ryWrNyj0Qbi8kQ4Nz3xI9CWJgQ8Nw3Vr1i_wem5hJ-9ot2XnjzZQCBr/192fx144f/image.png" alt="Дроп">
+                    </a>
+
+
+
+
+
+                    <a href="/user/6128" class="item-history classified">
+                        <img src="https://cdn.easydrop.ru/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhjxszFfjNH9eO7kYSCgvq6Z-mHwjIFu8Yl3-3Hotr03QC28ktkYmGnIoXAdARoZVzZ_VW7yeu7jIj84sqiLuLNUw/192fx144f/image.png" alt="Дроп">
+                    </a>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="history-weapon-hover hidden" style="left: 315px; top: 0px;">
+            <span>Galil AR | Ками</span>
+            <img src="https://cdn.easydrop.ru/apps/730/icons/econ/weapon_cases/crate_community_3.ce832a92f9fc329dc87d7a802374b918b07cdb84.png" alt="" class="hwh-case">
+            <b>Octavian August</b>
+            <img alt="" class="hwh-ava" src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/ed/edef6327ee05f0eceecdee803b28661e0337bd70.jpg">
+        </div>
+        <div class="header-line">
+            <a class="header-logo" href="/" title="На главную">
+                <img src="/img/logo_drop.png" alt="ForceDrop">
+            </a>
+            <nav>
+                <a href="/top">Топ пользователи</a>
+                <a href="/faq">FAQ и гарантии</a>
+                <a href="/trades">Live-обмены</a>
+                <a href="https://vk.com/forcedropnet" target="_blank">Мы Вконтакте</a>
+            </nav>
+            
+            
+            
+            
+            {{#if currentUser}}
+            
+          
+            
+            <div class="userblock">
+                <a href="/user/{{User.id}}" class="user-ava">
+                    <img src="{{User.avatar}}" alt="Аватар">
+                </a>
+                <a href="/user/{{User.id}}" class="user-name">
+                    <span> {{User.username}}</span>
+                </a>
+                <a href="#" class="user-balance refill">
+                    <span class="price">{{User.money}}</span>
+                </a>
+                <a href="#" class="quit">x</a>
+            </div>
+            {{else}}
+            
+            <div class="authblock login">
+			<img src="/img/auth_button.png">
+		</div>
+
+
+            {{/if}}
+        </div>
+    </header>
+</template>

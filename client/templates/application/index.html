@@ -1,0 +1,72 @@
+<template name="index">
+    <section>
+        <div class="items-index">
+
+
+            {{#each cases}}
+            <a href="/case/{{id}}" class="item">
+                <div class="i-picture">
+                    <img src="{{images}}" alt="{{name}}" style="height: 120px; width: auto;">
+                </div>
+                <div class="i-name">
+                    <span>{{name}}</span>
+                </div>
+                <div class="i-price">
+                    <span class="price">{{price}}</span>
+                </div>
+            </a>
+
+            {{/each}}
+ 
+
+ 
+
+        </div>
+
+        <div class="prefooter">
+            <a href="/" class="pf-logo" target="_blank">
+                <img src="/img/logo_drop.png">
+                <div>мощный дроп из кейсов CS:GO</div>
+            </a>
+            <div class="pf-about">
+                <div class="pfa pfa-unique">
+                    <div class="pfa-icon"></div>
+                    <div class="pfa-descr">
+                        <div class="pfa-header">Уникальный</div>
+                        <div class="pfa-text">Еще один уникалный проект от создателей CSCard, EasyDrop и <a href="https://csgo.tm/" target="_blank">CSGO.TM</a> - лучший дроп, только у нас!</div>
+                    </div>
+                </div>
+                <div class="pfa pfa-fast">
+                    <div class="pfa-icon"></div>
+                    <div class="pfa-descr">
+                        <div class="pfa-header">Быстрый</div>
+                        <div class="pfa-text">Мы гарантируем моментальную доставку выигранных предметов, при условии стабильной работы Steam</div>
+                    </div>
+                </div>
+                <div class="pfa pfa-reputation">
+                    <div class="pfa-icon"></div>
+                    <div class="pfa-descr">
+                        <div class="pfa-header">Мы дорожим своей репутацией</div>
+                        <div class="pfa-text">Вся статистика перед вами, комментарии о нас можно найти <a href="https://vk.com/forcedropnet" target="_blank">в группе ВК</a></div>
+                    </div>
+                </div>
+                <div class="pfa pfa-profitable">
+                    <div class="pfa-icon"></div>
+                    <div class="pfa-descr">
+                        <div class="pfa-header">Выгодный</div>
+                        <div class="pfa-text">У нас шанс получить любимый скин гораздо выше, а непонравившийся предмет можно продать прямо на сайте</div>
+                    </div>
+                </div>
+                <div class="pfa pfa-secure">
+                    <div class="pfa-icon"></div>
+                    <div class="pfa-descr">
+                        <div class="pfa-header">Безопасный</div>
+                        <div class="pfa-text">Мы используем защищенное соединение и имеем сертификаты безопасности</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+</template>

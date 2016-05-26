@@ -1,0 +1,66 @@
+<template name="top">
+
+    <section class="inner ta-left">
+        <h1><span class="gold">Топ везунчиков по заработку</span></h1>
+
+        <div class="best-users gross">
+
+              {{#each TopUser}}
+            
+            <div class="place1">
+                <div class="place">1</div>
+                <a href="/user/{{id}}" class="avatar">
+                    <img src="{{avatar}}" alt="Аватар">
+                    <div class="stat">
+                        <span class="price">{{top_value}}</span>
+                        <span>{{games_played}} кейсов</span>
+                    </div>
+                    <div class="p-username">{{username}}</div>
+                </a>
+            </div>
+            
+                 {{/each}}
+
+
+
+        </div>
+        <div>
+            <table class="table rate">
+                <thead>
+                    <tr>
+                        <th>Место</th>
+                        <th>Пользователь</th>
+                        <th>Кейсов открыл</th>
+                        <th>Профит</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                      {{#each TopUser}}
+                    <tr>
+                        <td style="text-align: center;">{{place}}</td>
+                        <td>
+                            <a href="/user/{{id}}" class="username">
+                                <img src="{{avatar}}" alt="Аватар">
+                                <span>{{username}}</span>
+                            </a>
+                        </td>
+                        <td>
+
+                            {{games_played}}
+
+                        </td>
+                        <td class="green">
+                            <span class="price">{{top_value}}</span>
+                        </td>
+                    </tr>
+                               {{/each}}
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</template>

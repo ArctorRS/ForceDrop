@@ -1,0 +1,61 @@
+<template name="user">
+
+
+    <section class="inner ta-left">
+        <div class="profile-common">
+            <div class="left">
+                <h1>{{user.username}}</h1>
+                <img src="{{user.avatar}}" alt="Аватар">
+                <a class="button user-steamacc" href="http://steamcommunity.com/profiles/{{user.steamid64}}" target="_blank">Профиль в Steam</a>
+
+
+            </div>
+            <div class="right">
+
+
+                <div id="drops">
+                    <h2>Предметы</h2>
+
+                    <div class="items-incase" style="padding: 10px 0 0; margin-bottom: -10px;">
+
+
+
+
+
+                        <a href="https://csgo.tm/?search=Negev%20%7C%20%D0%A2%D1%80%D0%B0-%D1%82%D0%B0-%D1%82%D0%B0" class="item-incase milspec" target="_blank" style="text-decoration: none;">
+                            <div class="picture">
+                                <img src="https://cdn.easydrop.ru/economy/image/fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZYMUrsm1j-9xgEObwgfEh_nvjlWhNzZCveCDfIBj98xqodQ2CZknz51MeSwJghkZzvAE6FKXeE74DfiDCA3_vhuUdO_4rZIfFnotteSMLN_N4tFHMHUXaKFYw2ou004gfIPKsbYp3vsiS_qb2ZYCQ2rpDyjN8Rd0w/192fx144f/image.png" alt="Дроп" class="drop-image">
+
+
+                                <img src="/public/img/weapons/milspec.png" alt="" class="case-image">
+
+
+
+                                <div class="status selled">
+                                    <span class="status-icon" title="Продано"></span>
+
+
+                                    <span class="price" title="Цена предмета в Steam">22.60</span>
+
+                                </div>
+
+
+                            </div>
+                            <div class="descr">
+                                Negev | Тра-та-та
+                            </div>
+                        </a>
+
+
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+</template>

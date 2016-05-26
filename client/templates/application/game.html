@@ -1,0 +1,74 @@
+<template name="game">
+
+ 
+    <section class="inner">
+        <h1 class="header-center">{{casein.name}}</h1>
+
+        <div class="canvas-container">
+            <div class="canvas-container-inner">
+                <img width="200px" height="140px" src="{{casein.images}}">
+            </div>
+        </div>
+
+
+        {{caseid}} {{#if currentUser}} {{#if _gt User.money casein.price}}
+        <div class="buttons">
+            <button class="button opencase btn-open-case">Получить за <span class="price">{{casein.price}}</span></button>
+        </div>
+        {{else}}
+
+        <div class="buttons">
+            <button class="button opencase" disabled="">Недостаточно средств</button>
+        </div>
+
+        <div class="fill">
+            <p>У вас недостаточно средств для получения предмета!</p>
+            <div class="addmoney addmoney-bigone white">
+                <input type="number" min="0" placeholder="Сумма" class="invoiceMoney">
+                <button class="button refill">Пополнить</button>
+            </div>
+        </div>
+
+
+        {{/if}} {{/if}}
+
+
+
+
+
+
+
+
+
+
+        <br>
+        <div class="h2-gold"><span>Содержимое кейса:</span></div>
+        <div class="items-incase" style="width: 885px; padding: 15px 15px; margin: auto; text-align: left;">
+
+
+            {{#each caseinfo}}
+
+            <a href="https://csgo.tm/?search={{ market_name_ru}}" class="item-incase {{ type}}" target="_blank" style="text-decoration: none;">
+                <div class="picture">
+                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/class/730/  {{ classid}}/192fx144f.png" alt="Дроп">
+
+
+
+
+
+                </div>
+                <div class="descr">
+                    {{ market_name_ru}}
+                </div>
+            </a>
+
+
+            {{/each}}
+
+
+        </div>
+    </section>
+
+
+
+</template>
